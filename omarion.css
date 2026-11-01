@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e5e5e5;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 12px 12px;
+    color: #333;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* التخطيط الرئيسي - البانر الجانبي أولاً (يمين) ثم المحتوى (يسار) */
+.app-layout {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* الشريط الجانبي (اليمين) */
+.sidebar-right {
+    width: 250px;
+    background-color: #02401b;
+    color: #ffffff;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #4b5563;
+    font-size: 55px;
+}
+
+.student-name {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.student-faculty {
+    font-size: 12px;
+    font-style: italic;
+    color: #e2e8f0;
+    margin-bottom: 2px;
+}
+
+.student-dept {
+    font-size: 12px;
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.student-id {
+    font-size: 12px;
+    font-style: italic;
+    color: #cbd5e1;
+}
+
+.sidebar-divider {
+    width: 90%;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 25px 0;
+}
+
+.greetings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.greeting-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: opacity 0.2s;
+}
+
+.greeting-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    transition: transform 0.2s, filter 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.btn-power { background-color: #0088ff; }
+.btn-key { background-color: #cca300; }
+.btn-lang { background-color: #1e40af; font-weight: bold; font-family: 'Cairo', sans-serif; }
+
+/* المحتوى الرئيسي (اليسار) */
+.main-content {
+    flex: 1;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.logo-box {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #0b3c5d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.logo-box i {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.portal-title {
+    color: #666666;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.announcements {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.survey-link {
+    color: #cc0000;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.military-notice {
+    color: #cc0000;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto;
+    text-decoration: underline;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px 15px;
+    margin-top: 10px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon-circle:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.service-label {
+    font-size: 11px;
+    color: #0000ee;
+    text-decoration: underline;
+    line-height: 1.2;
+    cursor: pointer;
+    max-width: 90px;
+    word-wrap: break-word;
+}
+
+.service-label:hover {
+    color: #551a8b;
+}
+
+.qr-code {
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: #000;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+/* ألوان الأيقونات */
+.icon-blue { background-color: #007bff; }
+.icon-crimson { background-color: #b9123e; }
+.icon-orange { background-color: #f37023; }
+.icon-teal { background-color: #00b090; }
+.icon-purple { background-color: #9333ea; }
+.icon-green { background-color: #10b981; }
+.icon-purple-dark { background-color: #8b5cf6; }
+.icon-coral { background-color: #ef4444; }
+.icon-olive { background-color: #84cc16; }
+.icon-navy { background-color: #1d4ed8; }
+
+/* الاستجابة للشاشات الصغيرة */
+@media (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar-right {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+}
