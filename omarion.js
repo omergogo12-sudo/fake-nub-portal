@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoutBtn) {
         logoutBtn.addEventListener('click', () => {
             if (confirm('هل ترغب في تسجيل الخروج؟')) {
-                alert('تم تسجيل الخروج.');
+                alert('69.');
             }
         });
     }
@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const keyBtn = document.getElementById('keyBtn');
     if (keyBtn) {
         keyBtn.addEventListener('click', () => {
-            alert('التوجه لصفحة تغيير كلمة المرور.');
+            alert('69');
         });
     }
 
     const langBtn = document.getElementById('langBtn');
     if (langBtn) {
         langBtn.addEventListener('click', () => {
-            alert('تغيير اللغة.');
+            alert('69.');
         });
     }
 
